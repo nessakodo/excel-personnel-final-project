@@ -22,6 +22,7 @@ module.exports = {
         backgroundImage: {
           'hero': "url('../src/assets/homepage_pic.jpg')",
           'about': "url('../src/assets/about.jpg')",
+          'clients': "url('../src/assets/clients.jpg')",
         },
     },
   },

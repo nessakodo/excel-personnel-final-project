@@ -1,14 +1,15 @@
 import React, {useEffect} from 'react';
-import { Tabs, Timeline, HiCalendar } from 'flowbite-react'
+import { Timeline, Footer, Card } from 'flowbite-react'
+import map_footer from '../assets/map_footer.jpeg';
 
 
 
 export default function About() {
     
-    // useEffect(() => {
-    //     // 👇️ scroll to top on page load
-    //     window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
-    //   }, []);
+    useEffect(() => {
+        // 👇️ scroll to top on page load
+        window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+      }, []);
 
    
 
@@ -17,11 +18,8 @@ export default function About() {
       
         
         <>
-        <div class="bg-about bg-cover bg-no-repeat">
-                <header class="flex items-center justify-center h-screen mb-12 bg-fixed bg-center bg-cover custom-img"/>
-                <div class="p-20 text-7xl text-black bg-white bg-opacity-25 font-thin">
-                        About us <br /> 
-                </div> 
+        <div class="bg-about bg-cover bg-no-repeat bg-center">
+                <header class="h-screen pt-10 pl-10 text-9xl text-black font-thin">About us</header>
         </div>
 
 
@@ -135,45 +133,100 @@ export default function About() {
             </div>
         </Timeline>
 
+
         <div class="flex justify-center items-center p-20 text-7xl text-black font-thin"><h1>Our Values</h1></div>
 
-        <Tabs.Group
-            aria-label="Pills"
-            style="pills"
-            class="flex justify-evenly">
-            <Tabs.Item
-                active={true}
-                title="Focus"
-            >
-                <div class="flex items-center place-content-center w-64 p-8 h-72 rounded-xl border-x-2 border-y-2 border-double border-orange-500">
-                We realize that strong search capabilities are what ensures the success of our clients, so that’s where we focus our resources and efforts.
+
+        <div class="grid-container3">
+            <div class="grid-child7">
+                        <Card class="bg-gray-200 ml-0 h-80 ">
+                                <h5 className="text-2xl font-bold tracking-tight ">
+                                    Focus
+                                </h5>
+                                <p className="font-normal text-gray-700 dark:text-gray-800">
+                                We realize that strong search capabilities are what ensures the success of our clients, so that’s where we focus our resources and efforts.
+                                </p>
+                            </Card>
+                    </div>
+                    
+
+            <div class="grid-child8 ">
+                    <Card class="bg-gray-100 mr-0 h-80">
+                        <h5 className="text-2xl font-bold tracking-tight ">
+                            Relationships
+                        </h5>
+                        <p className="font-normal text-gray-700 dark:text-gray-800">
+                        You need a staffing partner that focuses on solving problems rather than just filling orders. We take a strategic approach to solving your staffing challenges and improving your bottom line.
+                        </p>
+                    </Card>
                 </div>
-            </Tabs.Item>
-            <Tabs.Item title="Quality">
-                <div class="flex justify-center items-center w-36 rounded-xl border-x-2 border-y-2 border-double border-orange-500 p-12">
-                Quality costs less – when you need to hire, don’t settle for anything less than the highest quality available.
+                <div class="grid-child9">
+                    <Card class="bg-gray-200 mr-0 h-80">
+                        <h5 className="text-2xl font-bold tracking-tight ">
+                            Results
+                        </h5>
+                        <p className="font-normal text-gray-700 dark:text-gray-800">
+                        In order to make sure of constant progress and improvement, you need to be able to measure your results and the parameters of success that have been agreed upon. We pride ourselves on achieving results that benefit you!
+                        </p>
+                    </Card>
                 </div>
-            </Tabs.Item>
-            <Tabs.Item title="Relationships">
-                <div class="flex justify-center items-center w-36 rounded-xl border-x-2 border-y-2 border-double border-orange-500 p-12">
-                You need a staffing partner that focuses on solving problems rather than just filling orders. We take a strategic approach to solving your staffing challenges and improving your bottom line.
+                <div class="grid-child10">
+                    <Card class="bg-gray-100 mr-0 h-80">
+                        <h5 className="text-2xl font-bold tracking-tight ">
+                            Expertise
+                        </h5>
+                        <p className="font-normal text-gray-700 dark:text-gray-800">
+                        We have been providing exceptional, customized staffing fulfillment since 1992.
+                        </p>
+                    </Card>
                 </div>
-            </Tabs.Item>
-            <Tabs.Item title="Results">
-                <div class="flex justify-center items-center w-36 rounded-xl border-x-2 border-y-2 border-double border-orange-500 p-12">
-                In order to make sure of constant progress and improvement, you need to be able to measure your results and the parameters of success that have been agreed upon. We pride ourselves on achieving results that benefit you!
+                <div class="grid-child11">
+                        <Card class="bg-gray-200 ml-0 h-80 ">
+                                <h5 className="text-2xl font-bold tracking-tight ">
+                                    Quality
+                                </h5>
+                                <p className="font-normal text-gray-700 dark:text-gray-800">
+                                When you need to hire, do not settle for anything less than the highest quality available.
+                                </p>
+                            </Card>
+                    </div>
+        </div>
+
+        <Footer container={true}>
+            <div className="w-full">
+                <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
+                <div>
+                <img src={map_footer} class="mr-3 max-h-96 pr-16" alt="Flowbite Logo" />
+                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Conveniently located at I-25 and Thornton Pkwy, <br />our office is located just off of Grant St.</span>
                 </div>
-            </Tabs.Item>
-            <Tabs.Item
-                title="Expertise"
-            >
-                <div class="flex justify-center items-center w-36 rounded-xl border-x-2 border-y-2 border-double border-orange-500 p-12">
-                We have been providing exceptional, customized staffing fulfillment since 1992.
+                    <div className="grid grid-cols-2 gap-x-24 max-w-full mr-24 mt-10">
+                        <div>
+                        <Footer.Title title="Denver / Thornton Office" />
+                        <Footer.LinkGroup col={true}>
+                            9351 Grant St.<br />Suite 570<br />Thornton, CO 80229<br />Phone: (303)-427-4600<br /> Fax: (303)427-4147
+                        </Footer.LinkGroup>
+                        </div>
+                        <div>
+                        <Footer.Title title="Corporate / Payroll Office" />
+                        <Footer.LinkGroup col={true}>
+                            10111 Inverness Main St.<br />Englewood, CO 80112<br />Phone: (303)-805-2300<br /> Fax: (303)805-2400
+                        </Footer.LinkGroup>
+                        </div>
+                  
+                    </div>
                 </div>
-            </Tabs.Item>
-        </Tabs.Group>
+                <Footer.Divider />
+                    <div className="w-full sm:flex sm:items-center sm:justify-between">
+                    <Footer.Copyright
+                        href="#"
+                        by="Flowbite™"
+                        year={2022}/>
         
-        
+                </div>
+            </div>
+        </Footer>
+
+
         </>
     )
 

@@ -158,9 +158,29 @@ section h1 {
   align-content: center;
   justify-content: center;
 }
+.grid-container3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 0px;
+  margin-bottom: 100px;
+}
+
+.grid-container4 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  align-content: center;
+  justify-content: center;
+}
 
 
+.grid-container6 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+  margin-bottom: 100px;
+}
 
+<<<<<<< HEAD
 
 #nav {
   background-color: rgba(195, 195, 195);
@@ -300,3 +320,28 @@ justify-content: center;
 #select-date {
   color: black;
 }
+=======
+.valueAddedServices {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+ul1 {display: list-item; margin-left: 1em; list-style-type: disc; list-style-position: inside;}
+ul2 {display: list-item; margin-left: 1em; list-style-type: disc; list-style-position: inside;}
+ul3 {display: list-item; margin-left: 1em; list-style-type: disc; list-style-position: inside;}
+ul4 {display: list-item; margin-left: 1em; list-style-type: disc; list-style-position: inside;}
+ul5 {display: list-item; margin-left: 1em; list-style-type: disc; list-style-position: inside;}
+ul6 {display: list-item; margin-left: 1em; list-style-type: disc; list-style-position: inside;}
+ul7 {display: list-item; margin-left: 1em; list-style-type: disc; list-style-position: inside;}
+ul8 {display: list-item; margin-left: 1em; list-style-type: disc; list-style-position: inside;}
+ul9 {display: list-item; margin-left: 1em; list-style-type: disc; list-style-position: inside;}
+ul10 {display: list-item; margin-left: 1em; list-style-type: disc; list-style-position: inside;}
+ul11 {display: list-item; margin-left: 1em; list-style-type: disc; list-style-position: inside;}
+ul12 {display: list-item; margin-left: 1em; list-style-type: disc; list-style-position: inside;}
+ul13 {display: list-item; margin-left: 1em; list-style-type: disc; list-style-position: inside;}
+ul14 {display: list-item; margin-left: 1em; list-style-type: disc; list-style-position: inside;}
+ul15 {display: list-item; margin-left: 1em; list-style-type: disc; list-style-position: inside;}
+ul16 {display: list-item; margin-left: 1em; list-style-type: disc; list-style-position: inside;}
+>>>>>>> 12a9bd7e07bb9755e4e36fe01c8fae7967ecae4c
