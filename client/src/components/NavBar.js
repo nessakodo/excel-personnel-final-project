@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import { Navbar, Dropdown } from 'flowbite-react'
 import icon from "../assets/as-icon.png"
-import defaultpic from '../assets/profile-pic.webp'
+import defaultpic from '../assets/profile-pic.png'
 
 
 function NavBar({setJobsComp, profPhoto, loggedIn, setCurrentCandidate, currentCandidate, setLoggedIn, setVisible,  setProfileCard,} ) {
@@ -46,28 +46,34 @@ function NavBar({setJobsComp, profPhoto, loggedIn, setCurrentCandidate, currentC
 
 
     return (
-        <div>
+        <div id="nav-div">
             <Navbar 
                 fluid={true}
                 rounded={true}
-                class="mb-5 mt-5"
+                class="mb-5"
+                id="nav"
             >
                 <Navbar.Brand href="/">
                     <img
                         src={icon}
-                        className="ml-10 mr-5 h-6 sm:h-9"
+                        className="mt-5 ml-10 mr-5 h-6 sm:h-12"
                         alt="Excel Personnel"
                     />
-                    <span className=" self-center whitespace-nowrap text-xl font-semibold dark:text-gray ">
-                        Excel Personnel
+                    <span className=" self-center whitespace-nowrap text-xl font-semibold dark:text-gray mt-5"
+                        id="excel-header">
+                        EXCEL PERSONNEL
                     </span>
                 </Navbar.Brand>
             
                 {loggedIn ?
-                    (<div className="flex md:order-2 ">
+                    (<div className="mt-5 mr-10 flex md:order-2 ">
                         <Dropdown
                             inline={true}
-                            label={currentCandidate ? <img class='object-cover w-12 h-12 rounded-full border-2 border-gray-100' src={profPhoto.image_url} alt='' /> :
+                            arrowIcon={true}
+                            label={currentCandidate ? 
+                            <img class='object-cover w-12 h-12 rounded-full border-2 border-gray-100'
+                            id="prof-photo"
+                            src={profPhoto.image_url} alt='' /> :
                             null}
                         >
                             <Dropdown.Header >
@@ -94,11 +100,13 @@ function NavBar({setJobsComp, profPhoto, loggedIn, setCurrentCandidate, currentC
                         <Navbar.Toggle />
                     </div>)
                     :
-                    (<div className="mr-10 flex md:order-2 ">
+                    (<div className="mt-5 mr-10 flex md:order-2 ">
                         <Dropdown
-                            arrowIcon={false}
+                            arrowIcon={true}
                             inline={true}
-                            label={<img class='object-cover w-12 h-12' src={defaultpic} alt='' />}
+                            label={<img class='object-cover w-12 h-12 rounded-full border-2 border-gray-100' src={defaultpic} alt='' 
+                            id="prof-photo"
+                            />}
                         >
                             <Dropdown.Header>
                                 <span className="block text-md font-bold ">
@@ -113,22 +121,30 @@ function NavBar({setJobsComp, profPhoto, loggedIn, setCurrentCandidate, currentC
                     </div>)
                 }
 
-                <Navbar.Collapse >
+                <Navbar.Collapse 
+                class="mt-5"
+                id="nav-link-container"
+                >
                     <Navbar.Link
                         href="/"
-                        active={true}
+                        id="nav-link"
                     >
-                        Home
+                        HOME
                     </Navbar.Link>
-                    <Navbar.Link href="./about">
-                        About
+                    <Navbar.Link href="./about"
+                    id="nav-link"
+                    >
+                        ABOUT
                     </Navbar.Link>
                     <Navbar.Link href="./candidates"
+                     id="nav-link"
                     >
-                        Candidates
+                        CANDIDATES
                     </Navbar.Link>
-                    <Navbar.Link href="./clients">
-                        Clients
+                    <Navbar.Link href="./clients"
+                     id="nav-link"
+                    >
+                        CLIENTS
                     </Navbar.Link>
                 </Navbar.Collapse>
             </Navbar>

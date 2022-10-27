@@ -62,7 +62,9 @@ function ProfileCard({ currentCandidate, setCurrentCandidate, profPhoto, setProf
                 <div className='py-5 flex flex-col items-center'>
                     <div>
                         <Tooltip content="Update Photo">
-                            <img onClick={() => setModal(true)} class="object-cover w-72 h-72 rounded-full hover:cursor-pointer" src={profPhoto.image_url} alt="profile" />
+                            <img onClick={() => setModal(true)} class="object-cover w-72 h-72 rounded-full hover:cursor-pointer" src={profPhoto.image_url} alt="profile" 
+                            
+                            />
                         </Tooltip>
                     </div>
                 </div>

@@ -109,3 +109,38 @@ section h1 {
   margin-right: -20px;
 }
 
+
+#nav {
+  background-color: rgba(195, 195, 195);
+}
+
+#nav-div {
+  background-color:  rgba(195, 195, 195);
+}
+
+#nav-link {
+  color: rgb(84, 84, 84);
+  font-size: 18px;
+}
+
+
+
+#nav-link-container {
+margin-right: 120px;
+justify-content: center;
+}
+
+#excel-header {
+  font-size: 22px;
+}
+
+#prof-photo {
+  border-radius: 100%;
+  position: absolute ;
+  filter: grayscale(1);
+  border-width: 2px;
+  
+}
+
+#login-form {
+}

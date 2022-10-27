@@ -52,7 +52,8 @@ function Login({ visible, setVisible, setCurrentCandidate, setLoggedIn }) {
 
     return (
         <React.Fragment >
-            <Modal show={visible} size="md" popup={true} onClose={() => setVisible(false)}>
+            <Modal show={visible} size="md" popup={true} onClose={() => setVisible(false)}
+            id="login-form">
                 <Modal.Header />
                 <Modal.Body>
                     <form onSubmit={handleSubmit} >
