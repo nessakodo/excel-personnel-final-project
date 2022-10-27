@@ -22,7 +22,7 @@ class ProfilePhotosController < ApplicationController
         if photos.exists?
             render json: photos.last, status: :ok
         else
-            render json: {image_url: "https://i0.wp.com/researchictafrica.net/wp/wp-content/uploads/2016/10/default-profile-pic.jpg?ssl=1"}
+            render json: {image_url: "https://cdn.pixabay.com/photo/2016/11/14/17/39/person-1824144_960_720.png?ssl=1"}
         end
     end
     

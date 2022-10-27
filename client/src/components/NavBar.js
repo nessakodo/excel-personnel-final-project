@@ -46,8 +46,13 @@ function NavBar({setJobsComp, profPhoto, loggedIn, setCurrentCandidate, currentC
 
 
     return (
+<<<<<<< HEAD
         <div id="nav-div">
             <Navbar 
+=======
+        <div>
+            <Navbar class="bg-grey mb-5 mt-5 "
+>>>>>>> 3eca40cfabcd43f72e109180ca0561cab43bfeb4
                 fluid={true}
                 rounded={true}
                 class="mb-5"
@@ -149,7 +154,11 @@ function NavBar({setJobsComp, profPhoto, loggedIn, setCurrentCandidate, currentC
                 </Navbar.Collapse>
             </Navbar>
             <div class='flex flex-col items-center '> 
+<<<<<<< HEAD
                 <div className='absolute pt-20 text-gray-900'>
+=======
+                <div className='absolute pt-20 '>
+>>>>>>> 3eca40cfabcd43f72e109180ca0561cab43bfeb4
             </div>
         </div>
     </div >

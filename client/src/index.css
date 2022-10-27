@@ -30,9 +30,13 @@ bg-hero {
   color: pink;
 }
 
+<<<<<<< HEAD
 
 
 .skill-icons {
+=======
+/* .skill-icons {
+>>>>>>> 3eca40cfabcd43f72e109180ca0561cab43bfeb4
   margin: 2em auto;
   display: grid;
   justify-content: center;
@@ -40,11 +44,10 @@ bg-hero {
   flex-wrap: wrap;
   align-content: center;
   align-items: center;
-  filter: grayscale(1) contrast(.7);
   size-adjust: 50%;
   grid-template-columns: .1fr .1fr .1fr .1fr .1fr .1fr;
   grid-gap: 100px;
-}
+} */
 
 .skill-icons>img {
   display: block;
@@ -55,7 +58,60 @@ bg-hero {
   object-fit: cover;
   width: 1.5in;
   height: 1.5in;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
 }
+
+.wf-icon { filter: grayscale(1) contrast(.7); transition: transform .2s;}
+.wf-icon:hover { filter: grayscale(0); transform: scale(1.8) ;}
+.ball-icon { filter: grayscale(1) contrast(.7); transition: transform .2s; }
+.ball-icon:hover { filter: grayscale(0); transform: scale(1.8) ;}
+.fresca-icon { filter: grayscale(1) contrast(.7); transition: transform .2s; }
+.fresca-icon:hover { filter: grayscale(0); transform: scale(1.8) ;}
+.coors-icon { filter: grayscale(1) contrast(.7); transition: transform .2s; }
+.coors-icon:hover { filter: grayscale(0); transform: scale(1.8) ;}
+.cardinal-icon { filter: grayscale(1) contrast(.7); transition: transform .2s; }
+.cardinal-icon:hover { filter: grayscale(0); transform: scale(1.8) ;}
+.acme-icon { filter: grayscale(1) contrast(.7); transition: transform .2s; }
+.acme-icon:hover { filter: grayscale(0); transform: scale(1.8) ;}
+.aspen-icon { filter: grayscale(1) contrast(.7); transition: transform .2s; }
+.aspen-icon:hover { filter: grayscale(0); transform: scale(1.8) ;}
+.bigo-icon { filter: grayscale(1) contrast(.7); transition: transform .2s; }
+.bigo-icon:hover { filter: grayscale(0); transform: scale(1.8) ;}
+.bmc-icon { filter: grayscale(1) contrast(.7); transition: transform .2s; }
+.bmc-icon:hover { filter: grayscale(0); transform: scale(1.8) ;}
+.brownss-icon { filter: grayscale(1) contrast(.7); transition: transform .2s; }
+.brownss-icon:hover { filter: grayscale(0); transform: scale(1.8) ;}
+.cintas-icon { filter: grayscale(1) contrast(.7); transition: transform .2s; }
+.cintas-icon:hover { filter: grayscale(0); transform: scale(1.8) ;}
+.dmco-icon { filter: grayscale(1) contrast(.7); transition: transform .2s; }
+.dmco-icon:hover { filter: grayscale(0); transform: scale(1.8) ;}
+.empire-icon { filter: grayscale(1) contrast(.7); transition: transform .2s; }
+.empire-icon:hover { filter: grayscale(0); transform: scale(1.8) ;}
+.forterra-icon { filter: grayscale(1) contrast(.7); transition: transform .2s; }
+.forterra-icon:hover { filter: grayscale(0); transform: scale(1.8) ;}
+.jepp-icon { filter: grayscale(1) contrast(.7); transition: transform .2s; }
+.jepp-icon:hover { filter: grayscale(0); transform: scale(1.8) ;}
+.liva-icon { filter: grayscale(1) contrast(.7); transition: transform .2s; }
+.liva-icon:hover { filter: grayscale(0); transform: scale(1.8) ;}
+.metal-icon { filter: grayscale(1) contrast(.7); transition: transform .2s; }
+.metal-icon:hover { filter: grayscale(0); transform: scale(1.8) ;}
+.napa-icon { filter: grayscale(1) contrast(.7); transition: transform .2s; }
+.napa-icon:hover { filter: grayscale(0); transform: scale(1.8) ;}
+.sorin-icon { filter: grayscale(1) contrast(.7); transition: transform .2s; }
+.sorin-icon:hover { filter: grayscale(0); transform: scale(1.8) ;}
+.sund-icon { filter: grayscale(1) contrast(.7); transition: transform .2s; }
+.sund-icon:hover { filter: grayscale(0); transform: scale(1.8) ;}
+.tms-icon { filter: grayscale(1) contrast(.7); transition: transform .2s; }
+.tms-icon:hover { filter: grayscale(0); transform: scale(1.8) ;}
+.trelle-icon { filter: grayscale(1) contrast(.7); transition: transform .2s; }
+.trelle-icon:hover { filter: grayscale(0); transform: scale(1.8) ;}
+.uec-icon { filter: grayscale(1) contrast(.7); transition: transform .2s; }
+.uec-icon:hover { filter: grayscale(0); transform: scale(1.8) ;}
+
+
+
+
 
 section h1 {
   font-size: xx-large;
@@ -99,15 +155,15 @@ section h1 {
 
 .grid-container2 {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-auto-flow: column;
   grid-gap: 100px;
   margin-top: 100px;
-  width: 800px;
+  margin-bottom: 100px;
+  align-content: center;
+  justify-content: center;
 }
 
-.grid-child6 {
-  margin-right: -20px;
-}
+
 
 
 #nav {
