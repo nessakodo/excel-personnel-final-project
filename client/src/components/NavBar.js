@@ -55,7 +55,7 @@ function NavBar({setJobsComp, profPhoto, loggedIn, setCurrentCandidate, currentC
                 <Navbar.Brand href="/">
                     <img
                         src={icon}
-                        className="mt-5 ml-10 mr-5 h-6 sm:h-12"
+                        className="mt-5 ml-2 mr-5 h-6 sm:h-12"
                         alt="Excel Personnel"
                     />
                     <span className=" self-center whitespace-nowrap text-xl font-semibold dark:text-gray mt-5"
