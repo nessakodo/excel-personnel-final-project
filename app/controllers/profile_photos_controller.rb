@@ -1,4 +1,5 @@
 class ProfilePhotosController < ApplicationController
+    
     def index
         render json: ProfilePhoto.all
     end

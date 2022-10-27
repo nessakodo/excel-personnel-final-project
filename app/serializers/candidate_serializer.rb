@@ -3,4 +3,5 @@ class CandidateSerializer < ActiveModel::Serializer
 
   has_many :jobs
   has_many :applied_jobs
+  has_many :interviews
 end

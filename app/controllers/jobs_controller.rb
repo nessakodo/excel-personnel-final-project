@@ -9,6 +9,8 @@ class JobsController < ApplicationController
         render json: job, status: :accepted
     end
 
+    # Users cannot create a job, as this is an agency
+
     def remove
         job = AppliedJob.where(job_id: params[:job], candidate_id: params[:candidate])
         job.destroy_all

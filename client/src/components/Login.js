@@ -35,7 +35,6 @@ function Login({ visible, setVisible, setCurrentCandidate, setLoggedIn }) {
                 res.json().then((formData) => {
                     setCurrentCandidate(formData);
                     setLoggedIn(formData)
-
                     // home page pushed after login
                     history.push('/')
                 });

@@ -65,17 +65,18 @@ function NavBar({setJobsComp, profPhoto, loggedIn, setCurrentCandidate, currentC
                 </Navbar.Brand>
             
                 {loggedIn ?
-                    (<div className="mt-5 mr-10 flex md:order-2 ">
-                        <Dropdown
-                            inline={false}
-                            arrowIcon={true}
+                    (
+                    <div className="mt-5 mr-10 flex md:order-2">
+                        <Dropdown 
+                            inline={true}
+                            arrowIcon={false}
                             label={currentCandidate ? 
                             <img class='object-cover w-12 h-12 rounded-full border-2 border-gray-100'
                             id="prof-photo"
                             src={profPhoto.image_url} alt='' /> :
                             null}
                         >
-                            <Dropdown.Header >
+                            <Dropdown.Header id="dropdown-header">
                                 <span className="block text-sm">
                                     Signed in as:
                                 </span>
@@ -83,36 +84,35 @@ function NavBar({setJobsComp, profPhoto, loggedIn, setCurrentCandidate, currentC
                                     {currentCandidate.name}
                                 </span>
                                 </Dropdown.Header>
-                               
-                                <Dropdown.Item onClick={handleProfDropClick}>
+                               <div id="dropdown">
+                                <Dropdown.Item  onClick={handleProfDropClick}>
                                     Account
                                 </Dropdown.Item>
                                 <Dropdown.Item onClick={handleProfDropClick}>
                                     My Jobs
                                 </Dropdown.Item>
-                            
-
                             <Dropdown.Item onClick={(onSignOut)} >
                             <strong>Sign out</strong>
                             </Dropdown.Item>
+                            </div>
                         </Dropdown>
                         <Navbar.Toggle />
                     </div>)
                     :
-                    (<div className="mt-5 mr-10 flex md:order-2 ">
-                        <Dropdown
-                            arrowIcon={true}
+                    (<div className="mt-5 mr-10 flex md:order-2">
+                        <Dropdown 
+                            arrowIcon={false}
                             inline={true}
                             label={<img class='object-cover w-12 h-12 rounded-full border-2 border-gray-100' src={defaultpic} alt='' 
                             id="prof-photo"
                             />}
                         >
-                            <Dropdown.Header>
+                            <Dropdown.Header id="dropdown-header">
                                 <span className="block text-md font-bold ">
                                 Excel Personnel Portal
                                 </span>
                             </Dropdown.Header>
-                            <Dropdown.Item onClick={toLogin}>
+                            <Dropdown.Item onClick={toLogin} id="dropdown">
                                 Login
                             </Dropdown.Item>
                         </Dropdown>

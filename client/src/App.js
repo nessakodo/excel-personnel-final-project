@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react"
+import { useHistory } from 'react-router-dom'
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './index.css';
 
@@ -28,6 +29,7 @@ export default function App() {
   const [jobsComp, setJobsComp] = useState(false)
   const [myJobs, setMyJobs] = useState([])
   const [jobs, setJobs] = useState([])
+  const [myInterviews, setMyInterviews] = useState([])
 
   useEffect(() => {
     // 👇️ scroll to top on page load
@@ -84,7 +86,7 @@ export default function App() {
 
   }
 
-
+ 
   function onRemove(removedJob) {
     fetch(`/remove?job=${removedJob.id}&candidate=${currentCandidate.id}`, { 
       method: "DELETE" })
@@ -157,7 +159,10 @@ export default function App() {
             <Home />
           </Route>
           <Route exact path="/interview">
-            <Interview />
+            <Interview 
+            currentCandidate={currentCandidate}
+            loggedIn={loggedIn}
+             />
           </Route>
           <Route exact path="/resume">
             <Resume />
@@ -172,6 +177,7 @@ export default function App() {
                 setJobsComp={setJobsComp}
                 myJobs={myJobs}
                 onRemove={onRemove}
+                myInterviews={myInterviews}
              />
             </Route>
           }
