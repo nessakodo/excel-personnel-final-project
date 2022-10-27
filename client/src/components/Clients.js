@@ -22,7 +22,7 @@ export default function Clients () {
         <>
             
             <div class="bg-clients bg-cover bg-no-repeat bg-right">
-            <header class="h-screen pt-20 pl-5 text-9xl text-black font-thin">Staffing Improved</header>
+            <header class="h-screen pt-10 pl-5 text-9xl text-black font-thin">Staffing Improved</header>
             </div>
             
             <div class="grid-container5">
