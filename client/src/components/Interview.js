@@ -60,8 +60,6 @@ export default function Interview( { onInterview, myInterviews, setMyInterviews}
      
       <React.Fragment 
       >
-        
-        
                 <div id="interview-container">
                   <div id="interview-card">
                 <form id="interview-form">
