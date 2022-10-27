@@ -46,16 +46,10 @@ function NavBar({setJobsComp, profPhoto, loggedIn, setCurrentCandidate, currentC
 
 
     return (
-<<<<<<< HEAD
         <div id="nav-div">
-            <Navbar 
-=======
-        <div>
-            <Navbar class="bg-grey mb-5 mt-5 "
->>>>>>> 3eca40cfabcd43f72e109180ca0561cab43bfeb4
+            <Navbar
                 fluid={true}
                 rounded={true}
-                class="mb-5"
                 id="nav"
             >
                 <Navbar.Brand href="/">
@@ -73,7 +67,7 @@ function NavBar({setJobsComp, profPhoto, loggedIn, setCurrentCandidate, currentC
                 {loggedIn ?
                     (<div className="mt-5 mr-10 flex md:order-2 ">
                         <Dropdown
-                            inline={true}
+                            inline={false}
                             arrowIcon={true}
                             label={currentCandidate ? 
                             <img class='object-cover w-12 h-12 rounded-full border-2 border-gray-100'
@@ -154,14 +148,9 @@ function NavBar({setJobsComp, profPhoto, loggedIn, setCurrentCandidate, currentC
                 </Navbar.Collapse>
             </Navbar>
             <div class='flex flex-col items-center '> 
-<<<<<<< HEAD
-                <div className='absolute pt-20 text-gray-900'>
-=======
-                <div className='absolute pt-20 '>
->>>>>>> 3eca40cfabcd43f72e109180ca0561cab43bfeb4
+               
             </div>
         </div>
-    </div >
 
     )
 }

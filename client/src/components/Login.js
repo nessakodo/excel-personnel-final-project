@@ -48,17 +48,26 @@ function Login({ visible, setVisible, setCurrentCandidate, setLoggedIn }) {
     }
 
 
+    function formClose() {
+        setVisible(false)
+        history.push('/')
+    }
+
    
 
     return (
-        <React.Fragment >
-            <Modal show={visible} size="md" popup={true} onClose={() => setVisible(false)}
+        <React.Fragment 
+        >
+            <Modal 
+            show={visible} size="md" popup={true} onClose={formClose}
             id="login-form">
-                <Modal.Header />
-                <Modal.Body>
-                    <form onSubmit={handleSubmit} >
+                <div id="login-container">
+                <Modal.Header id="login-header"/>
+                <Modal.Body id="login-body">
+                    <form onSubmit={handleSubmit}
+                    >
                         <div className="space-y-6 px-6 pb-4 sm:pb-6 lg:px-8 xl:pb-8 ">
-                            <h3 className="text-xl font-medium dark:text-white">
+                            <h3 className="text-xl font-medium dark:text-black">
                                 Sign In
                             </h3>
                             {errors.length > 0 ?
@@ -68,7 +77,8 @@ function Login({ visible, setVisible, setCurrentCandidate, setLoggedIn }) {
                             }
                             <div >
                                 <div className="mb-2 block">
-                                    <Label htmlFor="email" value="Your email" />
+                                    <Label htmlFor="email" value="Your email" 
+                                    id="form-text"/>
                                 </div>
                                 <TextInput
                                     placeholder="name@email.com"
@@ -76,11 +86,13 @@ function Login({ visible, setVisible, setCurrentCandidate, setLoggedIn }) {
                                     name="email"
                                     value={email}
                                     onChange={handleChange}
+                                    id="form-input"
                                 />
                             </div>
+                            
                             <div>
                                 <div className="mb-2 block">
-                                    <Label htmlFor="password" value="Your password" />
+                                    <Label htmlFor="password" value="Your password" id="form-text"/>
                                 </div>
                                 <TextInput
                                     name="password"
@@ -88,30 +100,31 @@ function Login({ visible, setVisible, setCurrentCandidate, setLoggedIn }) {
                                     required={true}
                                     value={password}
                                     onChange={handleChange}
+                                    id="form-input"
                                 />
                             </div>
                             <div className="flex justify-between">
                                 <div className="flex items-center gap-2">
-                                    <Checkbox id="remember" />
-                                    <Label htmlFor="remember">Remember me</Label>
+                                    <Checkbox id="remember" class="w-4 h-4 text-gray-600 bg-gray-100 rounded focus:ring-gray-500 dark:focus:ring-gray-600 dark:ring-offset-gray-800 dark:bg-gray-300 dark:border-gray-600"/>
+                                    <Label htmlFor="remember" id="form-text">Remember me</Label>
                                 </div>
                                 <a
                                     href="/modal"
-                                    className="text-sm text-blue-700 hover:underline dark:text-blue-500"
+                                    className="text-md text-white hover:underline dark:text-black"
                                 >
                                     Lost Password?
                                 </a>
                             </div>
                             <div className="w-full">
-                                <Button type="submit">Log in to your account</Button>
+                                <Button type="submit" id="form-button">Log in to your account</Button>
                             </div>
-                            <div className="text-sm font-medium text-gray-500 dark:text-gray-300">
+                            <div className="text-md font-lg text-gray-500 dark:text-black">
                                 Not registered?
                                 <br/>
                                 <a
                                     href="/signup"
                                     onClick={() => setVisible(true)}
-                                    className="text-blue-700 hover:underline dark:text-blue-500"
+                                    className="text-orange-600 hover:underline dark:text-orange-600"
                                 >
                                     Create account
                                 </a>
@@ -119,7 +132,9 @@ function Login({ visible, setVisible, setCurrentCandidate, setLoggedIn }) {
                         </div>
                     </form>
                 </Modal.Body>
+                </div>
             </Modal>
+            
         </React.Fragment>
     );
 }
