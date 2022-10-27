@@ -23,13 +23,13 @@ function JobCard({ job, loggedIn, onApply, setHideAlert }) {
 
 
     return (
-        <div className='max-h-64 min-h-64 p-10 mb-10'>
-            <p class="mb-10 p-10 bg-white rounded-sm border border-gray-200 shadow-xl hover:bg-white-200 dark:bg-white-300 dark:border-gray-300 dark:hover:bg-gray-100">
+        <div className='h-80 p-10 mb-10'>
+            <p class="h-72 mb-10 p-10 bg-white rounded-sm border border-gray-200 shadow-xl hover:bg-white-200 dark:bg-white-300 dark:border-gray-300 dark:hover:bg-gray-100">
                 <div className=' justify-between border-b border-slate-300'>
                     <div>
                         <ul class=" justify-start items-center mb-2 text-gray-900 dark:text-gray">
                             <li>
-                                <span class="mr-4 hover:underline text-gray-900 dark:text-black-400 hover:cursor-pointer md:mr-6">View Details</span>
+                                <span onClick={viewDetails} class="mr-4 hover:underline text-gray-900 dark:text-black-400 hover:cursor-pointer md:mr-6">View Details</span>
                             </li>
                         </ul>
                     </div>

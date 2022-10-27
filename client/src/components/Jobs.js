@@ -12,24 +12,11 @@ function Jobs({ jobs, loggedIn, currentCandidate, onApply }) {
         setHideAlert("hidden")
     }
 
-    // function handleCategory(e) {
-    //     if (e.target.textContent.includes("-")) {
-    //         let category = e.target.textContent.toLowerCase().replace("-", " ").replace(" ", "_").replace(" ", "_").replace(" ", "_")
-    //         fetchCategory(category)
-    //     } else if (e.target.textContent === "Out of School Time") {
-    //         let category = "out_of_school_time"
-    //         fetchCategory(category)
-    //     } else {
-    //         let category = e.target.textContent.toLowerCase().replace(" ", "_").replace(" ", "_")
-    //         fetchCategory(category)
-    //     }
-    // }
-
     return (
-        <div className='flex items-center flex-col'>
+        <div className='mb-40 bg-gray-200 bg-opacity-50 pt-1  h-full'>
             <div className='w-3/4 pt-12'>
                 <div className={hideAlert}>
-                    <div id="alert-3" class="fixed top-0 flex p-4 mb-4 bg-green-100 rounded-lg dark:bg-green-200" role="alert">
+                    <div id="alert-3" class="fixed top-0 flex p-4 mb-4 bg-green-100 rounded-lg dark:bg-green-500" role="alert">
                         <svg aria-hidden="true" class="flex-shrink-0 w-5 h-5 text-green-700 dark:text-green-800" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
                         <span class="sr-only">Info</span>
                         <div class="ml-3 text-sm font-medium text-green-700 dark:text-green-800">
@@ -41,34 +28,12 @@ function Jobs({ jobs, loggedIn, currentCandidate, onApply }) {
                         </button>
                     </div>
                 </div>
-                {/* <Dropdown
-                    label="Categories"
-                    placement="right-start"
-                >
-                    <Dropdown.Item onClick={handleCategory}>
-                        Crisis Shelter
-                    </Dropdown.Item>
-                    <Dropdown.Item onClick={handleCategory}>
-                        Drop-In Center
-                    </Dropdown.Item>
-                    <Dropdown.Item onClick={handleCategory}>
-                        Out of School Time
-                    </Dropdown.Item>
-                    <Dropdown.Item onClick={handleCategory}>
-                        Street Outreach
-                    </Dropdown.Item>
-                    <Dropdown.Item onClick={handleCategory}>
-                        Transportation
-                    </Dropdown.Item>
-                    <Dropdown.Item onClick={handleCategory}>
-                        Transitional Independent Living
-                    </Dropdown.Item>
-                </Dropdown> */}
             </div>
-            <div className='inline-grid gap-10 grid-flow-col grid-cols-3 grid-rows-4 gap-3 mb-10 bg-gray-300 bg-opacity-50 pt-1 '>
+            <div className=' inline-grid frid-row-auto gap-10 grid-cols-3 grid-rows-4 gap-3 mt-10'>
                 {jobCards }
             </div>
-        </div>
+            </div>
+      
     )
 }
 

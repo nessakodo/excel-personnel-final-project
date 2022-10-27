@@ -32,8 +32,6 @@ function ProfileCard({ currentCandidate, setCurrentCandidate, profPhoto, setProf
             .then((res) => res.json())
             .then((data) => {
                 setCurrentCandidate(data)
-                // setShowEdit(false)
-                // form.reset()
             });
     }
 

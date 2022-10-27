@@ -4,11 +4,14 @@ import { useHistory } from 'react-router-dom'
 
 export default function Candidates() {
 
+    // use history to reroute 
     const history = useHistory();
 
+    // click function for reroute
     function onOpportunitiesClick() {
         history.push('/opportunities')
         }
+        
     return (
         <div>
 

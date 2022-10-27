@@ -51,13 +51,13 @@ function Login({ visible, setVisible, setCurrentCandidate, setLoggedIn }) {
    
 
     return (
-        <React.Fragment>
+        <React.Fragment >
             <Modal show={visible} size="md" popup={true} onClose={() => setVisible(false)}>
                 <Modal.Header />
                 <Modal.Body>
-                    <form onSubmit={handleSubmit}>
-                        <div className="space-y-6 px-6 pb-4 sm:pb-6 lg:px-8 xl:pb-8">
-                            <h3 className="text-xl font-medium text-gray-900 dark:text-white">
+                    <form onSubmit={handleSubmit} >
+                        <div className="space-y-6 px-6 pb-4 sm:pb-6 lg:px-8 xl:pb-8 ">
+                            <h3 className="text-xl font-medium dark:text-white">
                                 Sign In
                             </h3>
                             {errors.length > 0 ?
@@ -65,7 +65,7 @@ function Login({ visible, setVisible, setCurrentCandidate, setLoggedIn }) {
                                 :
                                 <h6 className='text-sm text-red-600'>{errors.error}</h6>
                             }
-                            <div>
+                            <div >
                                 <div className="mb-2 block">
                                     <Label htmlFor="email" value="Your email" />
                                 </div>

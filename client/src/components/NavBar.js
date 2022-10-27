@@ -9,6 +9,7 @@ function NavBar({setJobsComp, profPhoto, loggedIn, setCurrentCandidate, currentC
 
     const history = useHistory()
 
+      
     function toLogin() {
         history.push('/login')
         setVisible(true)
@@ -46,26 +47,27 @@ function NavBar({setJobsComp, profPhoto, loggedIn, setCurrentCandidate, currentC
 
     return (
         <div>
-            <Navbar class="bg-grey mb-5 mt-5"
+            <Navbar 
                 fluid={true}
                 rounded={true}
+                class="mb-5 mt-5"
             >
                 <Navbar.Brand href="/">
                     <img
                         src={icon}
-                        className="ml-5 mr-5 h-6 sm:h-9"
+                        className="ml-10 mr-5 h-6 sm:h-9"
                         alt="Excel Personnel"
                     />
-                    <span className=" self-center whitespace-nowrap text-xl font-semibold dark:text-white">
+                    <span className=" self-center whitespace-nowrap text-xl font-semibold dark:text-gray ">
                         Excel Personnel
                     </span>
                 </Navbar.Brand>
             
                 {loggedIn ?
-                    (<div className="flex md:order-2">
+                    (<div className="flex md:order-2 ">
                         <Dropdown
                             inline={true}
-                            label={currentCandidate ? <img class='object-cover w-12 h-12 rounded-full border-2 border-gray-400' src={profPhoto.image_url} alt='' /> :
+                            label={currentCandidate ? <img class='object-cover w-12 h-12 rounded-full border-2 border-gray-100' src={profPhoto.image_url} alt='' /> :
                             null}
                         >
                             <Dropdown.Header >
@@ -92,14 +94,14 @@ function NavBar({setJobsComp, profPhoto, loggedIn, setCurrentCandidate, currentC
                         <Navbar.Toggle />
                     </div>)
                     :
-                    (<div className="flex md:order-2">
+                    (<div className="mr-10 flex md:order-2 ">
                         <Dropdown
                             arrowIcon={false}
                             inline={true}
-                            label={<img class='object-cover w-12 h-12 rounded-full border-2 border-gray-400' src={defaultpic} alt='' />}
+                            label={<img class='object-cover w-12 h-12' src={defaultpic} alt='' />}
                         >
                             <Dropdown.Header>
-                                <span className="block text-sm font-bold">
+                                <span className="block text-md font-bold ">
                                 Excel Personnel Portal
                                 </span>
                             </Dropdown.Header>
@@ -121,22 +123,17 @@ function NavBar({setJobsComp, profPhoto, loggedIn, setCurrentCandidate, currentC
                     <Navbar.Link href="./about">
                         About
                     </Navbar.Link>
-                    <Navbar.Link href="./candidates">
+                    <Navbar.Link href="./candidates"
+                    >
                         Candidates
                     </Navbar.Link>
                     <Navbar.Link href="./clients">
                         Clients
                     </Navbar.Link>
-                    {/* <Navbar.Link href="./jobs">
-                        Jobs
-                    </Navbar.Link> */}
-                    {/* <Navbar.Link href="./opportunities">
-                        Opportunities
-                    </Navbar.Link> */}
                 </Navbar.Collapse>
             </Navbar>
-            <div class='flex flex-col items-center'> 
-                <div className='absolute pt-20'>
+            <div class='flex flex-col items-center '> 
+                <div className='absolute pt-20 text-gray-900'>
             </div>
         </div>
     </div >
