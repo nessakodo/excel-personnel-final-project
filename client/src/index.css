@@ -350,3 +350,28 @@ justify-content: center;
   text-align: center;
   justify-content: center;
 }
+
+
+.valueAddedServices {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+ul1 {display: list-item; margin-left: 1em; list-style-type: disc;}
+ul2 {display: list-item; margin-left: 1em; list-style-type: disc;}
+ul3 {display: list-item; margin-left: 1em; list-style-type: disc;}
+ul4 {display: list-item; margin-left: 1em; list-style-type: disc;}
+ul5 {display: list-item; margin-left: 1em; list-style-type: disc;}
+ul6 {display: list-item; margin-left: 1em; list-style-type: disc;}
+ul7 {display: list-item; margin-left: 1em; list-style-type: disc;}
+ul8 {display: list-item; margin-left: 1em; list-style-type: disc;}
+ul9 {display: list-item; margin-left: 1em; list-style-type: disc;}
+ul10 {display: list-item; margin-left: 1em; list-style-type: disc;}
+ul11 {display: list-item; margin-left: 1em; list-style-type: disc;}
+ul12 {display: list-item; margin-left: 1em; list-style-type: disc;}
+ul13 {display: list-item; margin-left: 1em; list-style-type: disc;}
+ul14 {display: list-item; margin-left: 1em; list-style-type: disc;}
+ul15 {display: list-item; margin-left: 1em; list-style-type: disc;}
+ul16 {display: list-item; margin-left: 1em; list-style-type: disc;}

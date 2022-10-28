@@ -58,10 +58,10 @@ function NavBar({setJobsComp, profPhoto, loggedIn, setCurrentCandidate, currentC
                         className="mt-5 ml-2 mr-5 h-6 sm:h-12"
                         alt="Excel Personnel"
                     />
-                    <span className=" self-center whitespace-nowrap text-xl font-semibold dark:text-gray mt-5"
+                    {/* <span className=" self-center whitespace-nowrap text-xl font-semibold dark:text-gray mt-5"
                         id="excel-header">
                         EXCEL PERSONNEL
-                    </span>
+                    </span> */}
                 </Navbar.Brand>
             
                 {loggedIn ?

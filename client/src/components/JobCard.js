@@ -24,7 +24,7 @@ function JobCard({ job, loggedIn, onApply, setHideAlert }) {
 
     return (
         <div className='h-80 p-10 mb-10'>
-            <p class="h-72 mb-10 p-10 bg-white rounded-sm border border-gray-200 shadow-xl hover:bg-white-200 dark:bg-white-300 dark:border-gray-300 dark:hover:bg-gray-100">
+            <p class="h-72 mb-10 p-10 bg-white rounded-sm border border-gray-200 shadow-xl hover:bg-white-200 dark:bg-white-300 dark:border-gray-300 dark:hover:bg-gray-100 ">
                 <div className=' justify-between border-b border-slate-300'>
                     <div>
                         <ul class=" justify-start items-center mb-2 text-gray-900 dark:text-gray">
@@ -53,18 +53,19 @@ function JobCard({ job, loggedIn, onApply, setHideAlert }) {
                 <ul class="justify-start items-center mb-6 text-gray-400 dark:text-gray text-sm">
 
                     <li>
-                        <a href="#" class="mr-4 md:mr-6"><span class='text-gray-100 dark:text-gray-900'>Job Type: </span>{job.type_of_hire}</a>
+                        <a href="#" class="mr-4 md:mr-6"><span class='text-gray-700 dark:text-gray-900'>Job Type: </span>{job.type_of_hire}</a>
                     </li>
     
                     <li>
-                        <a href="#" class="mr-4 md:mr-6"><span class='text-gray-100 dark:text-gray-900'>Description: </span>{job.name}</a>
+                        <a href="#" class="mr-4 md:mr-6"><span class='text-gray-700 dark:text-gray-900'>Description: </span>{job.name}</a>
                         {/* {job.description} */}
                     </li>
                 </ul>
-
+                
+{/* //add a pop up here */}
                 {details ?
 
-                    <ul class="flex flex-col items-start mb-6 text-gray-900 dark:text-white text-sm">
+                    <ul class="flex flex-col items-start mb-6 text-gray-900 text-gray-900 text-sm">
                         <li>
                             <a href="#" class="mr-4 md:mr-6 font-bold italic">{job.qualifications}</a>
                         </li>

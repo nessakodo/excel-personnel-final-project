@@ -66,8 +66,8 @@ export default function Home () {
                 <header class="flex items-center justify-center h-screen mb-12 bg-fixed bg-center bg-cover custom-img">
                     <div class="p-20 text-7xl text-black bg-gray-300 bg-opacity-75">
                         EXCEL PERSONNEL <br /> 
-                        <div class="text-2xl pt-8">
-                            We specialize in Administration, Forklift, Packaging, Quality Control, Shipping & Receiving and Warehouse talent. 
+                        <div class="text-xl pt-8">
+                            We specialize in Administration, Forklift Operations, Packaging, Quality Control, Shipping & Receiving, and Warehouse talent. 
                         </div>
                     </div> 
                 </header>

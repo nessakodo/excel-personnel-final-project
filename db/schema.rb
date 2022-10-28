@@ -16,13 +16,11 @@ ActiveRecord::Schema.define(version: 2022_10_26_175610) do
   enable_extension "plpgsql"
 
   create_table "applied_jobs", force: :cascade do |t|
+    t.integer "candidate_id"
+    t.integer "job_id"
     t.boolean "applied"
-    t.bigint "candidate_id", null: false
-    t.bigint "job_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["candidate_id"], name: "index_applied_jobs_on_candidate_id"
-    t.index ["job_id"], name: "index_applied_jobs_on_job_id"
   end
 
   create_table "applied_jobs_candidates", id: false, force: :cascade do |t|
@@ -42,12 +40,14 @@ ActiveRecord::Schema.define(version: 2022_10_26_175610) do
     t.string "name"
     t.string "email"
     t.integer "phone"
-    t.string "date"
+    t.datetime "date"
     t.string "format"
     t.bigint "candidate_id", null: false
+    t.bigint "job_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["candidate_id"], name: "index_interviews_on_candidate_id"
+    t.index ["job_id"], name: "index_interviews_on_job_id"
   end
 
   create_table "jobs", force: :cascade do |t|
@@ -66,7 +66,6 @@ ActiveRecord::Schema.define(version: 2022_10_26_175610) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "applied_jobs", "candidates"
-  add_foreign_key "applied_jobs", "jobs"
   add_foreign_key "interviews", "candidates"
+  add_foreign_key "interviews", "jobs"
 end
