@@ -87,7 +87,7 @@ export default function App() {
 
 
   function onRemove(removedJob) {
-    fetch(`/remove?job=${removedJob.id}&user=${currentCandidate.id}`, { method: "DELETE" })
+    fetch(`/remove?job=${removedJob.id}&candidate=${currentCandidate.id}`, { method: "DELETE" })
       .then(res => {
         if (res.ok) {
           setMyJobs(myJobs.filter(job => job.id !== removedJob.id))
